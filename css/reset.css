@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+html { font-size: 62.5%; scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { color: #333; text-decoration: none; }
+img { vertical-align: top;}
+ol, ul { list-style: none; }
+table { border-collapse: collapse; width: 100%; }
+i,em,address { font-style: normal; }
+caption,legend { display: none; }
+select,input,textarea { vertical-align: middle; }
+select,input,textarea,fieldset { outline: none; border: 0; }
+b,strong,h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+button, input { background-color: transparent; border: 0;}

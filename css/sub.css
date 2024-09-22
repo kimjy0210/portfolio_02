@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+#header { background: #fff;}
+#header .gnb > li > a { color: var(--gray-color);}
+#header .ham span { background: var(--gray-color);}
+
+
+/* sub_공통 영역 */
+#container { position: relative;}
+
+.sub_visual::after { content: ''; display: block; position: absolute; left: 0; top: 0; z-index: -1; width: 100%; height: 100%;}
+.sub_visual { position: relative; padding: 170px 5% 150px; background: rgba(0,0,0,0.3); text-align: center;}
+.sub_visual h2 { position: relative; font-size: 6rem; font-weight: 600; color: #fff;}
+
+.sub_visual .lnb { display: flex; justify-content: center; position: absolute; left: 50%; bottom: 0; width: 100%; transform: translateX(-50%);}
+.sub_visual .lnb li a { display: block; padding: 20px 70px; font-size: 1.8rem; color: #fff; backdrop-filter: blur(10px); transition: all 0.5s;}
+.sub_visual .lnb li.on a { background: #fff; color: var(--main-color); }
+
+.sub_visual .lnb .mlnb { display: none;}
+
+.contents .tit { padding: 10vw 0; text-align: center;}
+.contents .tit p { font-size: 2rem;}
+.contents .tit h3 { font-family: var(--sub-font); font-size: 6.2rem; font-weight: 500; color: var(--main-color);}
+
+.contents h4 { font-size: 4rem; font-weight: 500;}
+.contents h4+p { font-size: 1.8rem; word-break: keep-all;}
+
+@media(max-width:1031px) {
+  .sub_visual .lnb { flex-direction: column; bottom: 50px; width: 80%; text-align: left;}
+
+  .sub_visual .lnb li { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(180,151,89,0.8); color: #fff;}
+  .sub_visual .lnb li.on a { background: transparent; color: #fff;}
+  .sub_visual .lnb li.over a { padding: 0 150px 0 0; background: transparent; color: #fff;}
+  
+  .sub_visual .lnb > li:not(:first-child) { display: none;}
+  .sub_visual .lnb li a { padding: 0; backdrop-filter: blur(0);}
+  .sub_visual .lnb li span { width: 15px; height: 10px; background: url('../img/sub/tr_arrow.svg') no-repeat center /contain; transform: rotate(0); transition: all 0.5s;}
+  .sub_visual .lnb li.over span { transform: rotate(180deg);}
+
+  .sub_visual .lnb .mlnb { display: none; position: absolute; left: 0; top: 57px; width: 100%;}
+  .sub_visual .lnb.over .mlnb { display: flex; flex-direction: column; }
+
+  .sub_visual .lnb .mlnb li { padding: 15px 20px; border-bottom: 1px solid #f5f5f5; background: rgba(255,255,255,0.8);}
+  .sub_visual .lnb .mlnb li a { color: #333;}
+}
+
+@media(max-width:768px) {
+
+}
+
+@media(max-width:360px) {
+  #container .sub_visual { height: 285;}
+}
+
+
+/* sub_intro01 */
+#container .bg1::after { content: ''; display: block; background: url('../img/sub/intro_bg.jpg') no-repeat center / cover;}
+
+.intro_inner { max-width: 1414px; margin: 0 auto; padding: 0 2%;}
+.intro_box { display: flex; flex-direction: column; gap: 5vw; margin-bottom: 10vw;}
+
+.intro_box li::before { display: block; position: absolute; left: 0; top: 0; color: var(--main-color); transform: translate(-35px,30px) rotate(90deg);}
+.intro_box li:nth-child(1):before { content: 'FEATURE01';}
+.intro_box li:nth-child(2):before { content: 'FEATURE02'; left: auto; right: 0; transform: translate(35px,30px) rotate(90deg);}
+.intro_box li:nth-child(3):before { content: 'FEATURE03';}
+.intro_box li { position: relative; width: 100%; height: 720px;}
+
+.intro_box li .intro_txt::before { display: block; position: absolute; left: 0; top: -160px; font-family: var(--sub-font); font-size: 12rem; font-weight: 500; color: var(--main-color); letter-spacing: -0.5rem;}
+.intro_box li:nth-child(1) .intro_txt::before { content: '01';}
+.intro_box li:nth-child(2) .intro_txt::before { content: '02'; left: auto; right: 0;}
+.intro_box li:nth-child(3) .intro_txt::before { content: '03';}
+
+.intro_box li:nth-child(2) .intro_img { float: left;}
+.intro_box li:nth-child(2) .intro_txt { left: auto; right: 0; padding: 5vw 0 0 5vw; text-align: right;}
+
+.intro_txt { position: absolute; left: 0; bottom: 0; width: 50vw; padding: 5vw 5vw 0 0; background: #fff;}
+.intro_txt h4 { margin-bottom: 3vw; color: var(--main-color);}
+.intro_txt h4 span { display: block; font-family: var(--sub-font); font-size: 2rem; color: rgba(51,51,51,0.7);}
+
+.intro_img { float: right; width: 80%; height: 720px;}
+.intro_img img { width: 100%; height: 100%; object-fit: cover;}
+
+.parking { position: relative; padding: 5vw 0; background: rgba(0,0,0,0.7); color: #fff;}
+.parking::after { content: ''; display: block; position: absolute; left: 0; top: 0; z-index: -1; width: 100%; height: 100%; background: url('../img/sub/intro_bg2.jpg') no-repeat center / cover;}
+.parking h4 { font-size: 4rem; font-weight: 500;}
+.parking h4+p, .parking span { margin: 1.5vw 0 2vw; font-size: 1.8rem;}
+.parking span i { margin-right: 10px;}
+
+.awrod { padding: 5vw 0; background: #F2B203; color: #000; text-align: center;}
+.awrod h4 { margin: 2vw 0 1vw;}
+
+
+/* sub_room1 */
+#container .bg2::after { content: ''; display: block; background: url('../img/sub/room4.jpg') no-repeat center / cover;}
+
+.promotion ul { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+.promotion ul li { position: relative; margin-bottom: 40px; width: calc((100% - 40px) / 3);}
+.promotion ul li:nth-child(n+7) { display: none;}
+.promotion ul li a img { width: 100%; height: 500px; object-fit: cover;}
+.promotion ul li a dl { position: absolute; left: 0; bottom: 0; padding: 2vw 8vw 2vw 1vw; background: #fff url('../img/sub/line_arrow.svg') no-repeat right 2vw bottom 2.1vw;}
+.promotion ul li a dl dt { margin-bottom: 5px; font-size: 1.6rem; color: var(--main-color);}
+.promotion ul li a dl dd { font-size: 2rem; font-weight: 600;}
+
+.promotion .btn { margin: 5vw 0 10vw; text-align: center;}
+.promotion .btn .pr_more { margin: 0 auto; padding: 15px 50px; border: 1px solid var(--main-color); font-size: 2rem; color: var(--main-color);}
+
+
+/* sub_다이닝 페이지 */
+#container .bg3::after { content: ''; display: block; background: url('../img/sub/dining_bar.jpg') no-repeat center / cover;}
+
+.dining ul { display: flex; flex-wrap: wrap;}
+.dining ul li { display: flex;}
+.dining ul li > div { width: 50%;}
+.dining ul li .img { height: 600px;}
+.dining ul li .img img { width: 100%; height: 100%; object-fit: cover;}
+
+.dining ul li:nth-child(even) .img { order: 2;}
+.dining ul li:nth-child(even) .txt { padding-left: 0; padding-right: 70px; text-align: right;}
+.dining ul li:nth-child(even) .txt .tit_wrap h4 { order: 2;}
+.dining ul li:nth-child(even) .txt .time p { justify-content: end; text-align: right;}
+.dining ul li:nth-child(even) .txt .more { padding: 10px 0 10px 50px;}
+.dining ul li:nth-child(even) .txt .more::after { left: 0; right: auto; transform: translate(-2px,-5px) rotate(-45deg);}
+
+.dining ul li .txt { display: flex;flex-direction: column; justify-content: center; padding-left: 70px;}
+.dining ul li .txt .tit_wrap::before { display: block; width: 100%; font-family: var(--sub-font); font-size: 2rem; color: var(--gray-color);}
+.dining ul li:nth-child(1) .txt .tit_wrap::before {  content: 'FLAVORS';}
+.dining ul li:nth-child(2) .txt .tit_wrap::before {  content: 'TAMAYURA';}
+.dining ul li:nth-child(3) .txt .tit_wrap::before {  content: 'THE MARGAUX GRILL';}
+.dining ul li:nth-child(4) .txt .tit_wrap::before {  content: 'MOBO BAR';}
+.dining ul li:nth-child(5) .txt .tit_wrap::before {  content: 'THE LOUNGE';}
+.dining ul li:nth-child(6) .txt .tit_wrap::before {  content: 'CAFE ONE';}
+
+.dining ul li .txt .tit_wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 20px;}
+.dining ul li .txt .tit_wrap span { font-size: 2rem; color: #888;}
+
+.dining ul li .txt .txt_wrap > p { font-size: 1.8rem; word-break: keep-all;}
+.dining ul li .txt .time { margin: 30px 0 50px; font-size: 1.8rem;}
+.dining ul li .txt .time p { display: flex; flex-wrap: wrap; margin-bottom: 10px;}
+.dining ul li .txt .time p span { display: block; width: 300px; font-weight: 400;}
+.dining ul li .txt .time p span.day { width: 70px; font-weight: 700;}
+.dining ul li .txt .time p span:nth-of-type(4) { margin-left: 70px;}
+
+
+
+/* sub_익스피리언스 페이지 */
+#container .bg4::after { content: ''; display: block; background: url('../img/sub/ex_pool.jpg') no-repeat center / cover;}
+
+.experience .ex_box { display: flex; flex-direction: column; gap: 7vw;}
+.experience .ex_box li { position: relative;}
+.experience .ex_box li .img { width: 1200px; height: 600px;}
+.experience .ex_box li .img img { width: 100%; height: 100%; object-fit: cover;}
+
+.experience .ex_box li .txt { position: absolute; right: 0; top: 50%; width: 45%; padding: 70px; background: #fff; transform: translateY(-50%);}
+.experience .ex_box li .txt h4::after { content: ''; display: block; margin: 20px 0 40px; width: 50px; height: 2px; background: #aaa;}
+.experience .ex_box li .txt h4 span { display: block; font-size: 1.8rem; color: var(--main-color);}
+
+.experience .garden { padding: 10vw 0;}
+.experience .garden .tit { padding: 0;}
+.experience .garden .tit h4+p { margin: 70px 0;}
+.experience .garden .tit h4+p span { display: block;}
+
+.experience .garden .pic_wrap { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 250px); gap: 20px; grid-template-areas: 'a a b c' 'd e e c';}
+.experience .garden .pic_wrap .pic1 { grid-area: a;}
+.experience .garden .pic_wrap .pic2 { grid-area: b;}
+.experience .garden .pic_wrap .pic3 { grid-area: c;}
+.experience .garden .pic_wrap .pic4 { grid-area: d;}
+.experience .garden .pic_wrap .pic5 { grid-area: e;}
+.experience .garden .pic_wrap .pic img { width: 100%; height: 100%; object-fit: cover;}
+
+
+
+/* sub_이벤트 페이지 */
+#container .bg5::after { content: ''; display: block; background: url('../img/sub/wedding.jpg') no-repeat center / cover;}
+
+.event > .txt { padding: 100px 0 ; background: var(--main-color);}
+.event > .txt ul { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px;}
+.event > .txt ul li { font-family: var(--sub-font); font-size: 6rem; color: #fff; text-align: center;}
+.event > .txt ul li span { display: block; font-family: var(--main-font); font-size: 2rem; opacity: 0.7;}
+
+.event .swiper .swiper-slide { position: relative; width: 100%; height: 700px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.event .swiper .wd1 { background-image: url('../img/sub/wedding01.jpg');}
+.event .swiper .wd2 { background-image: url('../img/sub/wedding02.jpg');}
+
+.event .swiper .box { position: absolute; right: 10%; bottom: 0; width: 850px; padding: 50px; background: #fff;}
+.event .swiper .box h4::after { content: ''; display: block; width: 50px; height: 2px; margin: 20px 0 30px; background: var(--main-color);}
+.event .swiper .box h4+p { font-size: 2rem; color: #888;}
+.event .swiper .box .btn { display: flex; gap: 30px; margin-top: 30px;}
+.event .swiper .box .btn button { display: block; font-size: 2rem; font-weight: 500; color: #333;}
+
+.event .swiper .swiper-button-prev::after, .event .swiper .swiper-button-next::after { display: none;}
+.event .swiper .swiper-button-prev, .event .swiper .swiper-button-next { top: auto; bottom: 30px; width: 52px; height: 12px;}
+.event .swiper .swiper-button-prev { left: auto; right: 18%; background: url('../img/sub/prev.svg') no-repeat center;}
+.event .swiper .swiper-button-next { right: 13%; background: url('../img/sub/next.svg') no-repeat center;}
+
+.event .inner { margin: 100px auto;}
+.event .inner ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+.event .inner ol li .img { height: 250px;}
+.event .inner ol li .img img { width: 100%; height: 100%; object-fit: cover;}
+.event .inner ol li .txt { margin-top: 30px;}
+.event .inner ol li .txt span { font-size: 1.8rem; color: var(--main-color);}
+.event .inner ol li .txt h6 { font-size: 2.4rem; font-weight: 500;  line-height: 1.2; letter-spacing: -0.15rem;}
+
+.event .bottom_txt { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 400px; background: rgba(0,0,0,0.7); text-align: center;}
+.event .bottom_txt::after { content: ''; display: block; position: absolute; left: 0; top: 0; z-index: -1; width: 100%; height: 100%; background: url('../img/sub/wedding06.jpg') no-repeat center / cover;}
+
+.event .bottom_txt span { font-size: 4rem; color: #fff;}
